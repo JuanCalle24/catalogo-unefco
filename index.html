@@ -5,157 +5,219 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CATÁLOGO "TEXTOS GUÍA"</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --bg-app: #f8fafc;
-  --surface: #ffffff;
-  --border: #e2e8f0;
-  --border-subtle: #f1f5f9;
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --text-light: #94a3b8;
-  --accent: #0f172a;
-  --radius-lg: 20px;
-  --radius-md: 14px;
-  --radius-sm: 8px;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
-  --shadow-md: 0 4px 16px -2px rgb(0 0 0 / 0.05);
+  --bg-dark: #07090e;
+  --bg-card: rgba(15, 20, 32, 0.7);
+  --bg-card-hover: rgba(22, 30, 48, 0.85);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(56, 189, 248, 0.3);
+  
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  
+  --neon-cyan: #38bdf8;
+  --neon-green: #10b981;
+  --neon-amber: #f59e0b;
+  --neon-purple: #a855f7;
+  --neon-pink: #ec4899;
 }
 
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: var(--bg-app);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-dark);
   color: var(--text-main);
   line-height: 1.5;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.05) 0%, transparent 40%),
+    linear-gradient(to bottom, rgba(7, 9, 14, 0.8), #07090e);
+  background-attachment: fixed;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Header Ultra Minimal */
+/* Header & Banner Jev AI */
 header {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
   padding: 48px 24px 32px;
   text-align: center;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%; max-width: 1200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.brand-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--neon-green);
+  box-shadow: 0 0 8px var(--neon-green);
 }
 
 header h1 {
-  margin: 0 0 24px;
-  font-size: 2rem;
-  font-weight: 700;
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+  font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--text-main);
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
-/* Search Bar Clean */
+.tagline {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Buscador e Inputs Jev Style */
 .search-wrapper {
-  max-width: 580px;
+  max-width: 680px;
   margin: 0 auto;
   display: flex;
-  gap: 8px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .search-input {
   flex: 1;
-  padding: 12px 18px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: var(--bg-app);
+  min-width: 280px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.6);
   color: var(--text-main);
-  font-size: 0.9rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
   outline: none;
-  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
 }
 
 .search-input:focus {
-  background: var(--surface);
-  border-color: var(--text-main);
-  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.05);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+  background: rgba(15, 23, 42, 0.9);
 }
 
 .select-input {
-  padding: 12px 16px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: var(--bg-app);
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.6);
   color: var(--text-muted);
-  font-size: 0.88rem;
-  font-weight: 500;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
   outline: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
 }
 
 .select-input:focus {
-  border-color: var(--text-main);
+  border-color: var(--neon-cyan);
+  color: var(--text-main);
 }
 
-/* Minimal Stats Indicator */
+/* Panel de Status/Métricas */
 .stats-bar {
   display: inline-flex;
   gap: 24px;
   margin-top: 28px;
   padding: 8px 20px;
-  background: var(--bg-app);
-  border-radius: 40px;
-  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .stat-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  font-size: 0.78rem;
+  color: var(--text-dim);
 }
 
 .stat-item strong {
-  color: var(--text-main);
+  color: var(--neon-cyan);
   font-weight: 700;
 }
 
-/* Main Content */
+/* Layout Principal */
 main {
-  max-width: 1140px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 36px 24px 80px;
+  padding: 36px 20px 80px;
 }
 
-/* Minimal Pills Filter */
+/* Chips de Navegación */
 .chips-nav {
   display: flex;
-  gap: 6px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 .chip-btn {
-  border: 1px solid transparent;
-  background: transparent;
+  border: 1px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.5);
   color: var(--text-muted);
-  padding: 7px 16px;
-  border-radius: 30px;
-  font-size: 0.82rem;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .chip-btn:hover {
-  background: rgba(0, 0, 0, 0.03);
+  border-color: var(--neon-cyan);
   color: var(--text-main);
+  background: rgba(56, 189, 248, 0.05);
 }
 
 .chip-btn.active {
-  background: var(--surface);
-  color: var(--text-main);
-  border-color: var(--border);
-  box-shadow: var(--shadow-sm);
-  font-weight: 600;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--neon-cyan);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
 }
 
-/* Sections */
+/* Secciones de Subsistemas */
 .section-block {
   margin-bottom: 48px;
 }
@@ -163,10 +225,14 @@ main {
 .section-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  padding: 12px 18px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--neon-cyan);
+  border-radius: 8px;
   margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(6px);
 }
 
 .badge-tag {
@@ -175,68 +241,87 @@ main {
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 0.75rem;
+  border-radius: 4px;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--neon-cyan);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .section-title {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: var(--text-main);
   margin: 0;
+  color: var(--text-main);
 }
 
 .group-label {
-  font-size: 0.72rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   font-weight: 600;
-  color: var(--text-light);
-  margin: 24px 0 12px;
+  color: var(--neon-amber);
+  margin: 24px 0 12px 4px;
 }
 
-/* Clean Cards Grid */
+/* Grilla de Tarjetas */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
 }
 
+/* Tarjeta Node / Card */
 .card-item {
-  background: var(--surface);
-  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border-radius: 12px;
   padding: 22px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.card-item::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--border-glow), transparent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
 .card-item:hover {
-  border-color: #cbd5e1;
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  background: var(--bg-card-hover);
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.card-item:hover::before {
+  opacity: 1;
 }
 
 .card-title {
   margin: 0 0 16px;
-  font-size: 1.02rem;
-  font-weight: 600;
-  line-height: 1.4;
+  font-size: 0.98rem;
+  font-weight: 700;
   color: var(--text-main);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
-/* Course Rows */
+/* Filas de Cursos */
 .course-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .course-row {
@@ -244,52 +329,79 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 8px 12px;
-  background: var(--bg-app);
-  border-radius: var(--radius-md);
-  font-size: 0.85rem;
+  padding: 10px 12px;
+  background: rgba(7, 9, 14, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  transition: border-color 0.2s ease;
+}
+
+.course-row:hover {
+  border-color: rgba(255, 255, 255, 0.12);
   color: var(--text-main);
 }
 
+.course-name {
+  flex: 1;
+  line-height: 1.35;
+}
+
+/* Botones y Badges Jev Tech */
 .btn-download {
   border:0;cursor:pointer;font-family:inherit;
-  background: var(--text-main);
-  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--neon-green);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   text-decoration: none;
   padding: 5px 12px;
-  border-radius: var(--radius-sm);
-  font-size: 0.75rem;
-  font-weight: 600;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
   white-space: nowrap;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-download:hover {
-  opacity: 0.85;
+  background: var(--neon-green);
+  color: #000000;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
 }
 
 .tag-soon {
-  color: var(--text-light);
-  font-size: 0.75rem;
-  font-weight: 500;
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
   padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
 }
 
 footer {
   text-align: center;
-  padding: 32px 24px;
-  color: var(--text-light);
-  font-size: 0.82rem;
-  border-top: 1px solid var(--border);
+  padding: 32px 20px;
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(7, 9, 14, 0.8);
 }
 
 .empty-state {
   text-align: center;
-  background: var(--surface);
-  border: 1px dashed var(--border);
-  padding: 56px 24px;
-  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px dashed var(--border-subtle);
+  padding: 60px 20px;
+  border-radius: 12px;
   color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
 }
 </style>
 
@@ -299,7 +411,7 @@ footer {
  "subsistemas": [
   {
    "letra": "a",
-   "color": "#2563eb",
+   "color": "#0f2d59",
    "titulo": "Formación continua para todos los actores",
    "grupos": [
     {
@@ -446,7 +558,7 @@ footer {
   },
   {
    "letra": "b",
-   "color": "#d97706",
+   "color": "#1a4480",
    "titulo": "Educación Regular",
    "grupos": [
     {
@@ -576,7 +688,7 @@ footer {
   },
   {
    "letra": "c",
-   "color": "#0d9488",
+   "color": "#d97706",
    "titulo": "Alternativa y Especial",
    "grupos": [
     {
@@ -641,7 +753,7 @@ footer {
   },
   {
    "letra": "d",
-   "color": "#7c3aed",
+   "color": "#1e293b",
    "titulo": "Educación Superior",
    "grupos": [
     {
@@ -673,7 +785,7 @@ footer {
   },
   {
    "letra": "e",
-   "color": "#475569",
+   "color": "#0f2d59",
    "titulo": "TACFI - Formación Integral",
    "grupos": [
     {
@@ -776,68 +888,114 @@ footer {
 <body>
 
 <header>
+  <div class="brand-badge">SYSTEM // DECISIONS AT MACHINE SPEED</div>
   <h1>CATÁLOGO "TEXTOS GUÍA"</h1>
+  <div class="tagline">Acceso estructurado a recursos y material pedagógico</div>
   
   <div class="search-wrapper">
-    <input id="q" class="search-input" placeholder="Buscar ciclo o curso...">
-    <select id="f" class="select-input"><option value="">Todos los niveles</option></select>
+    <input id="q" class="search-input" placeholder="> Buscar ciclo, módulo o curso...">
+    <select id="f" class="select-input"><option value="">[ TODOS LOS NIVELES ]</option></select>
   </div>
 
   <div class="stats-bar">
-    <div class="stat-item"><strong id="s1">-</strong> ciclos</div>
-    <div class="stat-item"><strong id="s2">-</strong> PDFs listos</div>
-    <div class="stat-item"><strong id="s3">-</strong> próximos</div>
+    <div class="stat-item">CICLOS: <strong id="s1">-</strong></div>
+    <div class="stat-item">PDFS LISTOS: <strong id="s2">-</strong></div>
+    <div class="stat-item">PRÓXIMOS: <strong id="s3">-</strong></div>
   </div>
 </header>
 
 <main>
   <div class="chips-nav" id="chips"></div>
   <div id="c"></div>
-  <div class="empty-state" id="v" style="display:none">Sin resultados.</div>
+  <div class="empty-state" id="v" style="display:none">[!] No se encontraron resultados para la búsqueda actual.</div>
 </main>
 
 <footer>
-  CATÁLOGO "TEXTOS GUÍA"
+  JEV SYSTEM v1.0 — DECISIONS AT MACHINE SPEED
 </footer>
 
 <script>
 var D=null, filtro="";
 var c=document.getElementById('c'),v=document.getElementById('v'),q=document.getElementById('q'),f=document.getElementById('f'),chips=document.getElementById('chips');
+
 function esc(s){return String(s).replace(/[&<>]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m]})}
+
 function render(){
  if(!D)return;
  var txt=q.value.trim().toLowerCase();c.innerHTML='';var nc=0,nd=0,np=0,ok=false;
  D.subsistemas.forEach(function(s,i){
   if(filtro&&String(i)!==filtro)return;
-  var html='<div class="section-block"><div class="section-header"><span class="badge-tag" style="background:'+s.color+'">'+s.letra+'</span><h2 class="section-title">'+esc(s.titulo)+'</h2></div>';
+  var html='<div class="section-block"><div class="section-header"><span class="badge-tag">'+s.letra+'</span><h2 class="section-title">'+esc(s.titulo)+'</h2></div>';
   var tiene=false;
   s.grupos.forEach(function(g){
    var fil=g.ciclos.filter(function(x){return (x.nombre+' '+x.cursos.map(function(y){return y.nombre}).join(' ')).toLowerCase().indexOf(txt)>=0});
    if(!fil.length)return;tiene=true;ok=true;
-   if(g.nombre)html+='<div class="group-label">'+esc(g.nombre)+'</div>';
+   if(g.nombre)html+='<div class="group-label">// '+esc(g.nombre)+'</div>';
    html+='<div class="cards-grid">';
-   fil.forEach(function(x){nc++;html+='<div class="card-item"><div><h3 class="card-title">'+esc(x.nombre)+'</h3><div class="course-list">';
-    x.cursos.forEach(function(cu){if(cu.archivo){nd++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><button type="button" class="btn-download" data-pdf="'+encodeURI(cu.archivo.ruta)+'">PDF</button></div>'}else{np++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><span class="tag-soon">Pronto</span></div>'}});
-    html+='</div></div></div>'});
-   html+='</div>'});
+   fil.forEach(function(x){
+    nc++;
+    html+='<div class="card-item"><h3 class="card-title">'+esc(x.nombre)+'</h3><div class="course-list">';
+    x.cursos.forEach(function(cu){
+      if(cu.archivo){
+        nd++;
+        html+='<div class="course-row"><span class="course-name">'+esc(cu.nombre)+'</span><button type="button" class="btn-download" data-pdf="'+encodeURI(cu.archivo.ruta)+'"><span>↓</span> PDF</button></div>';
+      }else{
+        np++;
+        html+='<div class="course-row"><span class="course-name">'+esc(cu.nombre)+'</span><span class="tag-soon">PRONTO</span></div>';
+      }
+    });
+    html+='</div></div>';
+   });
+   html+='</div>';
+  });
   html+='</div>';
-  if(tiene)c.innerHTML+=html});
- document.getElementById('s1').textContent=nc;document.getElementById('s2').textContent=nd;document.getElementById('s3').textContent=np;v.style.display=ok?'none':'block'}
-function init(d){D=d;
- D.subsistemas.forEach(function(s,i){var o=document.createElement('option');o.value=i;o.textContent=s.letra.toUpperCase()+' — '+s.titulo;f.appendChild(o);
-  var b=document.createElement('button');b.className='chip-btn';b.textContent=s.titulo.slice(0,30);b.onclick=function(){filtro=filtro==String(i)?"":String(i);f.value=filtro;var all=document.querySelectorAll('.chip-btn');for(var k=0;k<all.length;k++)all[k].classList.remove('active');if(filtro)b.classList.add('active');render()};chips.appendChild(b)});
- render()}
-try{D=JSON.parse(document.getElementById('datos').textContent);init(D)}catch(e){fetch('data.json').then(function(r){return r.json()}).then(init).catch(function(err){v.style.display='block';v.textContent='No se pudo cargar: '+err.message})}
-var t;q.oninput=function(){clearTimeout(t);t=setTimeout(render,120)};f.onchange=function(){filtro=f.value;render()};
+  if(tiene)c.innerHTML+=html;
+ });
+ document.getElementById('s1').textContent=nc;
+ document.getElementById('s2').textContent=nd;
+ document.getElementById('s3').textContent=np;
+ v.style.display=ok?'none':'block';
+}
+
+function init(d){
+ D=d;
+ D.subsistemas.forEach(function(s,i){
+  var o=document.createElement('option');o.value=i;o.textContent='['+s.letra.toUpperCase()+'] '+s.titulo;f.appendChild(o);
+  var b=document.createElement('button');b.className='chip-btn';b.textContent=s.titulo.slice(0,32);
+  b.onclick=function(){
+    filtro=filtro==String(i)?"":String(i);
+    f.value=filtro;
+    var all=document.querySelectorAll('.chip-btn');
+    for(var k=0;k<all.length;k++)all[k].classList.remove('active');
+    if(filtro)b.classList.add('active');
+    render();
+  };
+  chips.appendChild(b);
+ });
+ render();
+}
+
+try{
+ D=JSON.parse(document.getElementById('datos').textContent);
+ init(D);
+}catch(e){
+ fetch('data.json').then(function(r){return r.json()}).then(init).catch(function(err){
+  v.style.display='block';v.textContent='Error al cargar datos: '+err.message;
+ });
+}
+
+var t;
+q.oninput=function(){clearTimeout(t);t=setTimeout(render,100)};
+f.onchange=function(){filtro=f.value;render()};
 </script>
 
-<div id="gate" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:99;align-items:center;justify-content:center">
- <div style="background:#fff;border-radius:16px;padding:28px;width:min(92vw,380px);text-align:center">
+<div id="gate" style="display:none;position:fixed;inset:0;background:rgba(7,9,14,.7);z-index:99;align-items:center;justify-content:center">
+ <div style="background:#0f1420;border:1px solid rgba(56,189,248,.3);border-radius:12px;padding:28px;width:min(92vw,380px);text-align:center;color:#f1f5f9">
   <h3 style="margin:0 0 6px">Contenido protegido</h3>
-  <p style="margin:0 0 14px;color:#64748b;font-size:.85rem">Ingresa la clave para descargar el PDF</p>
-  <input id="gate-pass" type="password" placeholder="Clave" style="width:100%;padding:12px;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:10px">
-  <div id="gate-err" style="display:none;color:#dc2626;font-size:.8rem;margin-bottom:8px">Clave incorrecta</div>
-  <div style="display:flex;gap:8px"><button id="gate-ok" style="flex:1;background:#0f172a;color:#fff;border:0;border-radius:10px;padding:11px;cursor:pointer;font-weight:700">Descargar</button><button id="gate-x" style="flex:1;background:#f1f5f9;border:0;border-radius:10px;padding:11px;cursor:pointer">Cancelar</button></div>
+  <p style="margin:0 0 14px;color:#94a3b8;font-size:.85rem">Ingresa la clave para descargar el PDF</p>
+  <input id="gate-pass" type="password" placeholder="Clave" style="width:100%;box-sizing:border-box;padding:12px;border:1px solid rgba(255,255,255,.12);border-radius:8px;margin-bottom:10px;background:rgba(7,9,14,.6);color:#f1f5f9">
+  <div id="gate-err" style="display:none;color:#f87171;font-size:.8rem;margin-bottom:8px">Clave incorrecta</div>
+  <div style="display:flex;gap:8px"><button id="gate-ok" style="flex:1;background:#10b981;color:#000;border:0;border-radius:8px;padding:11px;cursor:pointer;font-weight:700">Descargar</button><button id="gate-x" style="flex:1;background:rgba(255,255,255,.08);color:#f1f5f9;border:0;border-radius:8px;padding:11px;cursor:pointer">Cancelar</button></div>
  </div>
 </div>
 <script>
