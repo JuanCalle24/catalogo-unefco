@@ -816,7 +816,7 @@ function render(){
    if(g.nombre)html+='<div class="group-label">'+esc(g.nombre)+'</div>';
    html+='<div class="cards-grid">';
    fil.forEach(function(x){nc++;html+='<div class="card-item"><div><h3 class="card-title">'+esc(x.nombre)+'</h3><div class="course-list">';
-    x.cursos.forEach(function(cu){if(cu.archivo){nd++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><a class="btn-download" href="'+encodeURI(cu.archivo.ruta)+'" target="_blank" rel="noopener">PDF</a></div>'}else{np++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><span class="tag-soon">Pronto</span></div>'}});
+    x.cursos.forEach(function(cu){if(cu.archivo){nd++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><button class="btn-download" data-pdf="'+encodeURI(cu.archivo.ruta)+'">PDF</button></div>'}else{np++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><span class="tag-soon">Pronto</span></div>'}});
     html+='</div></div></div>'});
    html+='</div>'});
   html+='</div>';
@@ -828,6 +828,40 @@ function init(d){D=d;
  render()}
 try{D=JSON.parse(document.getElementById('datos').textContent);init(D)}catch(e){fetch('data.json').then(function(r){return r.json()}).then(init).catch(function(err){v.style.display='block';v.textContent='No se pudo cargar: '+err.message})}
 var t;q.oninput=function(){clearTimeout(t);t=setTimeout(render,120)};f.onchange=function(){filtro=f.value;render()};
+</script>
+
+<div id="gate" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:99;align-items:center;justify-content:center">
+ <div style="background:#fff;border-radius:16px;padding:28px;width:min(92vw,380px);text-align:center">
+  <h3 style="margin:0 0 6px">Contenido protegido</h3>
+  <p style="margin:0 0 14px;color:#64748b;font-size:.85rem">Ingresa la clave para descargar el PDF</p>
+  <input id="gate-pass" type="password" placeholder="Clave" style="width:100%;padding:12px;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:10px">
+  <div id="gate-err" style="display:none;color:#dc2626;font-size:.8rem;margin-bottom:8px">Clave incorrecta</div>
+  <div style="display:flex;gap:8px"><button id="gate-ok" style="flex:1;background:#0f172a;color:#fff;border:0;border-radius:10px;padding:11px;cursor:pointer;font-weight:700">Descargar</button><button id="gate-x" style="flex:1;background:#f1f5f9;border:0;border-radius:10px;padding:11px;cursor:pointer">Cancelar</button></div>
+ </div>
+</div>
+<script>
+(function(){
+var pdf=null;
+var CLAVE="@UNEFCO26";
+document.addEventListener('click',function(e){
+ var b=e.target.closest?e.target.closest('[data-pdf]'):null;
+ if(!b)return;
+ pdf=b.getAttribute('data-pdf');
+ document.getElementById('gate').style.display='flex';
+ document.getElementById('gate-err').style.display='none';
+ document.getElementById('gate-pass').value='';
+ setTimeout(function(){document.getElementById('gate-pass').focus()},50);
+});
+function cerrar(){document.getElementById('gate').style.display='none';pdf=null}
+document.getElementById('gate-x').onclick=cerrar;
+document.getElementById('gate').onclick=function(e){if(e.target.id==='gate')cerrar()};
+document.getElementById('gate-ok').onclick=function(){
+ var v=document.getElementById('gate-pass').value;
+ if(v===CLAVE){var a=document.createElement('a');a.href=pdf;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();cerrar()}
+ else{document.getElementById('gate-err').style.display='block'}
+};
+document.getElementById('gate-pass').onkeydown=function(e){if(e.key==='Enter')document.getElementById('gate-ok').click()};
+})();
 </script>
 </body>
 </html>
