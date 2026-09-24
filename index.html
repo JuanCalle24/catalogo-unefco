@@ -252,6 +252,7 @@ main {
 }
 
 .btn-download {
+  border:0;cursor:pointer;font-family:inherit;
   background: var(--text-main);
   color: #ffffff;
   text-decoration: none;
@@ -816,7 +817,7 @@ function render(){
    if(g.nombre)html+='<div class="group-label">'+esc(g.nombre)+'</div>';
    html+='<div class="cards-grid">';
    fil.forEach(function(x){nc++;html+='<div class="card-item"><div><h3 class="card-title">'+esc(x.nombre)+'</h3><div class="course-list">';
-    x.cursos.forEach(function(cu){if(cu.archivo){nd++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><button class="btn-download" data-pdf="'+encodeURI(cu.archivo.ruta)+'">PDF</button></div>'}else{np++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><span class="tag-soon">Pronto</span></div>'}});
+    x.cursos.forEach(function(cu){if(cu.archivo){nd++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><button type="button" class="btn-download" data-pdf="'+encodeURI(cu.archivo.ruta)+'">PDF</button></div>'}else{np++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><span class="tag-soon">Pronto</span></div>'}});
     html+='</div></div></div>'});
    html+='</div>'});
   html+='</div>';
@@ -856,7 +857,7 @@ function cerrar(){document.getElementById('gate').style.display='none';pdf=null}
 document.getElementById('gate-x').onclick=cerrar;
 document.getElementById('gate').onclick=function(e){if(e.target.id==='gate')cerrar()};
 document.getElementById('gate-ok').onclick=function(){
- var v=document.getElementById('gate-pass').value;
+ var v=document.getElementById('gate-pass').value.trim();
  if(v===CLAVE){var a=document.createElement('a');a.href=pdf;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();cerrar()}
  else{document.getElementById('gate-err').style.display='block'}
 };
