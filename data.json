@@ -1,0 +1,477 @@
+{
+ "titulo": "Catalogo de Ciclos Formativos 2026",
+ "subsistemas": [
+  {
+   "letra": "a",
+   "color": "#c0392b",
+   "titulo": "Formacion continua para todos los actores",
+   "grupos": [
+    {
+     "nombre": "",
+     "ciclos": [
+      {
+       "nombre": "Ofimatica Basica para la Gestion y Planificacion Educativa",
+       "cursos": [
+        {
+         "nombre": "C1 Fundamentos de procesamiento de textos",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-curso-1-fundamentos-de-procesamiento-de-textos-en-el.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Gestion del cuaderno pedagogico",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-curso-2.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Presentaciones interactivas",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-3-curso-3.pdf"
+         }
+        },
+        {
+         "nombre": "C4 Uso basico de internet",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-4-curso-4-ofimatica.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Gamificacion e Innovacion con IA",
+       "cursos": [
+        {
+         "nombre": "C1 Herramientas digitales para la gamificacion",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-uso-y-aplicacion-de-herramientas-y-recursos-digitale.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Diseno de experiencias gamificadas",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-diseno-de-experiencias-gamificadas-en-el-aula.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Evaluacion en el aula gamificada",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-3-c3-evaluacion-y-seguimiento-en-el-aula-gamificada.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Prevencion y atencion de la violencia en el ambito educativo",
+       "cursos": [
+        {
+         "nombre": "C1 Proteccion integral de NNA",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-proteccion-integral-de-ninas-ninos-y-adolescentes.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Marco normativo y deteccion",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-c2-corregido-prevencion.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Referencia y contrarreferencia",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-3-c3-prevencion-corregido.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Adaptaciones Curriculares e Inclusion (DUA)",
+       "cursos": [
+        {
+         "nombre": "C1 Diseno Universal para el Aprendizaje",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-diseno-universal-para-el-aprendizaje-dua.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Discapacidad sensorial",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-estrategias-para-la-discapacidad-sensorial.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Neurodiversidad",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-3-cuaderno-3-neurodiversidad-y-dificultades-de-aprendi.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Lengua de Senas Boliviana",
+       "cursos": [
+        {
+         "nombre": "C1 Comunidad sorda y LSB",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-lengua-de-senas-boliviana-para-maestras-maestros-y-o.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Habilidades comunicativas en LSB",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-c2-lsb.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Expresion corporal y facial"
+        },
+        {
+         "nombre": "C4 Procesos comunicativos en LSB"
+        }
+       ]
+      },
+      {
+       "nombre": "Educacion Integral en Sexualidad",
+       "cursos": [
+        {
+         "nombre": "C1 Sexualidad integral"
+        },
+        {
+         "nombre": "C2 Prevencion del embarazo"
+        },
+        {
+         "nombre": "C3 Prevencion de ITS y VIH"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "letra": "b",
+   "color": "#e08e24",
+   "titulo": "Educacion Regular",
+   "grupos": [
+    {
+     "nombre": "Inicial",
+     "ciclos": [
+      {
+       "nombre": "Estimulacion Oportuna",
+       "cursos": [
+        {
+         "nombre": "C1 Desarrollo integral",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-1-desarrollo-integral-en-educacion-inicial.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Instrumentos psicopedagogicos",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-2-c-2-instrumentos-psicopedagogicos-para-la-identifica.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Estrategias de estimulacion integral"
+        }
+       ]
+      },
+      {
+       "nombre": "Habilidades previas a Lectura y Escritura",
+       "cursos": [
+        {
+         "nombre": "C1 Conciencia fonologica",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-1-c1-desarrollo-de-la-conciencia-fonologica.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Comprension lectora",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-2-c-2-instrumentos-psicopedagogicos-para-la-identifica.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Grafomotricidad"
+        }
+       ]
+      },
+      {
+       "nombre": "Dinamizando la Educacion Inicial No Escolarizada",
+       "cursos": [
+        {
+         "nombre": "C1 Desarrollo integral y aprendizaje temprano",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-1-desarrollo-integral-y-aprendizaje-temprano.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Atencion a la diversidad"
+        },
+        {
+         "nombre": "C3 Factores del desarrollo"
+        },
+        {
+         "nombre": "C4 Contexto social y cultural"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Primaria",
+     "ciclos": [
+      {
+       "nombre": "Comprension Lectora y Escritura Creativa",
+       "cursos": [
+        {
+         "nombre": "C1 Herramientas de deteccion lectora",
+         "archivo": {
+          "ruta": "pdfs/primaria-curso-1-herramientas-de-deteccion-y-estrategias-para-la-mejo.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Didactica de la lectura",
+         "archivo": {
+          "ruta": "pdfs/primaria-curso-2-c2-didactica-de-la-lectura-textual-inferencial-o-ded.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Escritura creativa"
+        }
+       ]
+      },
+      {
+       "nombre": "Pensamiento Logico Matematico",
+       "cursos": [
+        {
+         "nombre": "C1 Estrategias de pensamiento logico"
+        },
+        {
+         "nombre": "C2 Resolucion de problemas"
+        },
+        {
+         "nombre": "C3 Evaluacion inteligente"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Secundaria",
+     "ciclos": [
+      {
+       "nombre": "Lectura Comprensiva y Produccion Textual",
+       "cursos": [
+        {
+         "nombre": "C1 Comprension lectora"
+        },
+        {
+         "nombre": "C2 Redaccion y argumentacion"
+        },
+        {
+         "nombre": "C3 Lectura critica"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "letra": "c",
+   "color": "#16a085",
+   "titulo": "Alternativa y Especial",
+   "grupos": [
+    {
+     "nombre": "Alternativa",
+     "ciclos": [
+      {
+       "nombre": "Aprendizaje Basado en Proyectos",
+       "cursos": [
+        {
+         "nombre": "C1 Metodologias ABP"
+        },
+        {
+         "nombre": "C2 Aplicacion de ABP"
+        },
+        {
+         "nombre": "C3 Evaluacion de ABP"
+        }
+       ]
+      },
+      {
+       "nombre": "Emprendimientos y Empleabilidad",
+       "cursos": [
+        {
+         "nombre": "C1 Plan de negocios"
+        },
+        {
+         "nombre": "C2 Marketing digital"
+        },
+        {
+         "nombre": "C3 Plan de accion"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Especial",
+     "ciclos": [
+      {
+       "nombre": "Atencion a Dificultades de Aprendizaje",
+       "cursos": [
+        {
+         "nombre": "C1 Estrategias didacticas inclusivas",
+         "archivo": {
+          "ruta": "pdfs/especial-curso-1-curso-1-de-educacion-especial.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Tecnologias educativas",
+         "archivo": {
+          "ruta": "pdfs/especial-curso-2-cuaderno-2-educacion-especial.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Desarrollo socioemocional"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "letra": "d",
+   "color": "#8e44ad",
+   "titulo": "Educacion Superior",
+   "grupos": [
+    {
+     "nombre": "Institutos Tecnicos",
+     "ciclos": [
+      {
+       "nombre": "Asesoria y Tutoria en Graduacion",
+       "cursos": [
+        {
+         "nombre": "C1 Planificacion del acompanamiento",
+         "archivo": {
+          "ruta": "pdfs/superior-curso-1-cuaderno-1-asesoria-y-turoria.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Seguimiento de tutoria",
+         "archivo": {
+          "ruta": "pdfs/superior-curso-2-c2-seguimiento-para-la-tutoria-en-las-diferentes-mod.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Evaluacion de modalidades"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "letra": "e",
+   "color": "#2c3e50",
+   "titulo": "TACFI - Formacion Integral",
+   "grupos": [
+    {
+     "nombre": "",
+     "ciclos": [
+      {
+       "nombre": "Ingles aplicado a la docencia",
+       "cursos": [
+        {
+         "nombre": "C1 Fundamentos comunicativos",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-1-fundamentos-comunicativos-en-ingles-para-la-formacio.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Comunicacion cotidiana y profesional",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-2-curso-2-ingles-para-la-comunicacion-cotidiana-y-prof.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Comunicacion narrativa",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-3-curso-3-tacfi-ingles.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Arte Escenico y Liderazgo",
+       "cursos": [
+        {
+         "nombre": "C1 Fundamentos de expresion escenica",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-1-fundamentos-de-comunicacion-y-expresion-escenica-par.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Comunicacion creativa y liderazgo",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-2-c2-comunicacion-creativa-y-liderazgo-pedagogico-a-tr.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Dominio del aula",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-3-c3-gestion-y-dominio-del-aula-mediante-estrategias-d.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Textos didacticos con IA",
+       "cursos": [
+        {
+         "nombre": "C1 Diseno de materiales",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-1-diseno-y-estructuracion-de-materiales-didacticos.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Produccion y edicion de textos",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-2-curso-2-produccion-y-edicion-de-textos-didacticos-pa.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Recursos digitales multiformato"
+        }
+       ]
+      },
+      {
+       "nombre": "Produccion Academica con IA",
+       "cursos": [
+        {
+         "nombre": "C1 Uso etico de la IA",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-1-c1-fundamentos-y-uso-etiuco-de-la-ia-en-la-producion.pdf"
+         }
+        },
+        {
+         "nombre": "C2 IA para investigacion",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-2-curso-2-herramientas-de-inteligencia-artificial-para.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Materiales academicos con IA"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

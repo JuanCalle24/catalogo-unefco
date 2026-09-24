@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CATÁLOGOS Y CURSOS</title>
+<style>
+:root {
+  --bg-app: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --border-subtle: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --accent: #0f172a;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  --shadow-md: 0 4px 16px -2px rgb(0 0 0 / 0.05);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header Ultra Minimal */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 48px 24px 32px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 24px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+}
+
+/* Search Bar Clean */
+.search-wrapper {
+  max-width: 580px;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-app);
+  color: var(--text-main);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  background: var(--surface);
+  border-color: var(--text-main);
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.05);
+}
+
+.select-input {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-app);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-input:focus {
+  border-color: var(--text-main);
+}
+
+/* Minimal Stats Indicator */
+.stats-bar {
+  display: inline-flex;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 8px 20px;
+  background: var(--bg-app);
+  border-radius: 40px;
+  border: 1px solid var(--border);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.stat-item strong {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+/* Main Content */
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 36px 24px 80px;
+}
+
+/* Minimal Pills Filter */
+.chips-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.chip-btn {
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 7px 16px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chip-btn:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--text-main);
+}
+
+.chip-btn.active {
+  background: var(--surface);
+  color: var(--text-main);
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+}
+
+/* Sections */
+.section-block {
+  margin-bottom: 48px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.group-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--text-light);
+  margin: 24px 0 12px;
+}
+
+/* Clean Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 18px;
+}
+
+.card-item {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  margin: 0 0 16px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-main);
+}
+
+/* Course Rows */
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.course-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: var(--bg-app);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.btn-download {
+  background: var(--text-main);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.btn-download:hover {
+  opacity: 0.85;
+}
+
+.tag-soon {
+  color: var(--text-light);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  color: var(--text-light);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+}
+
+.empty-state {
+  text-align: center;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  padding: 56px 24px;
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+}
+</style>
+
+<script id="datos" type="application/json">
+{
+ "titulo": "CATÁLOGOS Y CURSOS",
+ "subsistemas": [
+  {
+   "letra": "a",
+   "color": "#2563eb",
+   "titulo": "Formación continua para todos los actores",
+   "grupos": [
+    {
+     "nombre": "",
+     "ciclos": [
+      {
+       "nombre": "Ofimática Básica para la Gestión y Planificación Educativa",
+       "cursos": [
+        {
+         "nombre": "C1 Fundamentos de procesamiento de textos",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-curso-1-fundamentos-de-procesamiento-de-textos-en-el.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Gestión del cuaderno pedagógico",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-curso-2.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Presentaciones interactivas",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-3-curso-3.pdf"
+         }
+        },
+        {
+         "nombre": "C4 Uso básico de internet",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-4-curso-4-ofimatica.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Gamificación e Innovación con IA",
+       "cursos": [
+        {
+         "nombre": "C1 Herramientas digitales para la gamificación",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-uso-y-aplicacion-de-herramientas-y-recursos-digitale.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Diseño de experiencias gamificadas",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-diseno-de-experiencias-gamificadas-en-el-aula.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Evaluación en el aula gamificada",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-3-c3-evaluacion-y-seguimiento-en-el-aula-gamificada.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Prevención y atención de la violencia en el ámbito educativo",
+       "cursos": [
+        {
+         "nombre": "C1 Protección integral de NNA",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-proteccion-integral-de-ninas-ninos-y-adolescentes.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Marco normativo y detección",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-c2-corregido-prevencion.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Referencia y contrarreferencia",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-3-c3-prevencion-corregido.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Adaptaciones Curriculares e Inclusión (DUA)",
+       "cursos": [
+        {
+         "nombre": "C1 Diseño Universal para el Aprendizaje",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-diseno-universal-para-el-aprendizaje-dua.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Discapacidad sensorial",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-estrategias-para-la-discapacidad-sensorial.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Neurodiversidad",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-3-cuaderno-3-neurodiversidad-y-dificultades-de-aprendi.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Lengua de Señas Boliviana",
+       "cursos": [
+        {
+         "nombre": "C1 Comunidad sorda y LSB",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-1-lengua-de-senas-boliviana-para-maestras-maestros-y-o.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Habilidades comunicativas en LSB",
+         "archivo": {
+          "ruta": "pdfs/todos-los-actores-curso-2-c2-lsb.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Expresión corporal y facial"
+        },
+        {
+         "nombre": "C4 Procesos comunicativos en LSB"
+        }
+       ]
+      },
+      {
+       "nombre": "Educación Integral en Sexualidad",
+       "cursos": [
+        {
+         "nombre": "C1 Sexualidad integral"
+        },
+        {
+         "nombre": "C2 Prevención del embarazo"
+        },
+        {
+         "nombre": "C3 Prevención de ITS y VIH"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "letra": "b",
+   "color": "#d97706",
+   "titulo": "Educación Regular",
+   "grupos": [
+    {
+     "nombre": "Inicial",
+     "ciclos": [
+      {
+       "nombre": "Estimulación Oportuna",
+       "cursos": [
+        {
+         "nombre": "C1 Desarrollo integral",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-1-desarrollo-integral-en-educacion-inicial.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Instrumentos psicopedagógicos",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-2-c-2-instrumentos-psicopedagogicos-para-la-identifica.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Estrategias de estimulación integral"
+        }
+       ]
+      },
+      {
+       "nombre": "Habilidades previas a Lectura y Escritura",
+       "cursos": [
+        {
+         "nombre": "C1 Conciencia fonológica",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-1-c1-desarrollo-de-la-conciencia-fonologica.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Comprensión lectora",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-2-c-2-instrumentos-psicopedagogicos-para-la-identifica.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Grafomotricidad"
+        }
+       ]
+      },
+      {
+       "nombre": "Dinamizando la Educación Inicial No Escolarizada",
+       "cursos": [
+        {
+         "nombre": "C1 Desarrollo integral y aprendizaje temprano",
+         "archivo": {
+          "ruta": "pdfs/inicial-curso-1-desarrollo-integral-y-aprendizaje-temprano.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Atención a la diversidad"
+        },
+        {
+         "nombre": "C3 Factores del desarrollo"
+        },
+        {
+         "nombre": "C4 Contexto social y cultural"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Primaria",
+     "ciclos": [
+      {
+       "nombre": "Comprensión Lectora y Escritura Creativa",
+       "cursos": [
+        {
+         "nombre": "C1 Herramientas de detección lectora",
+         "archivo": {
+          "ruta": "pdfs/primaria-curso-1-herramientas-de-deteccion-y-estrategias-para-la-mejo.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Didáctica de la lectura",
+         "archivo": {
+          "ruta": "pdfs/primaria-curso-2-c2-didactica-de-la-lectura-textual-inferencial-o-ded.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Escritura creativa"
+        }
+       ]
+      },
+      {
+       "nombre": "Pensamiento Lógico Matemático",
+       "cursos": [
+        {
+         "nombre": "C1 Estrategias de pensamiento lógico"
+        },
+        {
+         "nombre": "C2 Resolución de problemas"
+        },
+        {
+         "nombre": "C3 Evaluación inteligente"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Secundaria",
+     "ciclos": [
+      {
+       "nombre": "Lectura Comprensiva y Producción Textual",
+       "cursos": [
+        {
+         "nombre": "C1 Comprensión lectora"
+        },
+        {
+         "nombre": "C2 Redacción y argumentación"
+        },
+        {
+         "nombre": "C3 Lectura crítica"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "letra": "c",
+   "color": "#0d9488",
+   "titulo": "Alternativa y Especial",
+   "grupos": [
+    {
+     "nombre": "Alternativa",
+     "ciclos": [
+      {
+       "nombre": "Aprendizaje Basado en Proyectos",
+       "cursos": [
+        {
+         "nombre": "C1 Metodologías ABP"
+        },
+        {
+         "nombre": "C2 Aplicación de ABP"
+        },
+        {
+         "nombre": "C3 Evaluación de ABP"
+        }
+       ]
+      },
+      {
+       "nombre": "Emprendimientos y Empleabilidad",
+       "cursos": [
+        {
+         "nombre": "C1 Plan de negocios"
+        },
+        {
+         "nombre": "C2 Marketing digital"
+        },
+        {
+         "nombre": "C3 Plan de acción"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "nombre": "Especial",
+     "ciclos": [
+      {
+       "nombre": "Atención a Dificultades de Aprendizaje",
+       "cursos": [
+        {
+         "nombre": "C1 Estrategias didácticas inclusivas",
+         "archivo": {
+          "ruta": "pdfs/especial-curso-1-curso-1-de-educacion-especial.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Tecnologías educativas",
+         "archivo": {
+          "ruta": "pdfs/especial-curso-2-cuaderno-2-educacion-especial.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Desarrollo socioemocional"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "letra": "d",
+   "color": "#7c3aed",
+   "titulo": "Educación Superior",
+   "grupos": [
+    {
+     "nombre": "Institutos Técnicos",
+     "ciclos": [
+      {
+       "nombre": "Asesoría y Tutoría en Graduación",
+       "cursos": [
+        {
+         "nombre": "C1 Planificación del acompañamiento",
+         "archivo": {
+          "ruta": "pdfs/superior-curso-1-cuaderno-1-asesoria-y-turoria.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Seguimiento de tutoría",
+         "archivo": {
+          "ruta": "pdfs/superior-curso-2-c2-seguimiento-para-la-tutoria-en-las-diferentes-mod.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Evaluación de modalidades"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "letra": "e",
+   "color": "#475569",
+   "titulo": "TACFI - Formación Integral",
+   "grupos": [
+    {
+     "nombre": "",
+     "ciclos": [
+      {
+       "nombre": "Inglés aplicado a la docencia",
+       "cursos": [
+        {
+         "nombre": "C1 Fundamentos comunicativos",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-1-fundamentos-comunicativos-en-ingles-para-la-formacio.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Comunicación cotidiana y profesional",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-2-curso-2-ingles-para-la-comunicacion-cotidiana-y-prof.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Comunicación narrativa",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-3-curso-3-tacfi-ingles.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Arte Escénico y Liderazgo",
+       "cursos": [
+        {
+         "nombre": "C1 Fundamentos de expresión escénica",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-1-fundamentos-de-comunicacion-y-expresion-escenica-par.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Comunicación creativa y liderazgo",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-2-c2-comunicacion-creativa-y-liderazgo-pedagogico-a-tr.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Dominio del aula",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-3-c3-gestion-y-dominio-del-aula-mediante-estrategias-d.pdf"
+         }
+        }
+       ]
+      },
+      {
+       "nombre": "Textos didácticos con IA",
+       "cursos": [
+        {
+         "nombre": "C1 Diseño de materiales",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-1-diseno-y-estructuracion-de-materiales-didacticos.pdf"
+         }
+        },
+        {
+         "nombre": "C2 Producción y edición de textos",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-2-curso-2-produccion-y-edicion-de-textos-didacticos-pa.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Recursos digitales multiformato"
+        }
+       ]
+      },
+      {
+       "nombre": "Producción Académica con IA",
+       "cursos": [
+        {
+         "nombre": "C1 Uso ético de la IA",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-1-c1-fundamentos-y-uso-etiuco-de-la-ia-en-la-producion.pdf"
+         }
+        },
+        {
+         "nombre": "C2 IA para investigación",
+         "archivo": {
+          "ruta": "pdfs/tacfi-curso-2-curso-2-herramientas-de-inteligencia-artificial-para.pdf"
+         }
+        },
+        {
+         "nombre": "C3 Materiales académicos con IA"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>CATÁLOGOS Y CURSOS</h1>
+  
+  <div class="search-wrapper">
+    <input id="q" class="search-input" placeholder="Buscar ciclo o curso...">
+    <select id="f" class="select-input"><option value="">Todos los niveles</option></select>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item"><strong id="s1">-</strong> ciclos</div>
+    <div class="stat-item"><strong id="s2">-</strong> PDFs listos</div>
+    <div class="stat-item"><strong id="s3">-</strong> próximos</div>
+  </div>
+</header>
+
+<main>
+  <div class="chips-nav" id="chips"></div>
+  <div id="c"></div>
+  <div class="empty-state" id="v" style="display:none">Sin resultados.</div>
+</main>
+
+<footer>
+  CATÁLOGOS Y CURSOS
+</footer>
+
+<script>
+var D=null, filtro="";
+var c=document.getElementById('c'),v=document.getElementById('v'),q=document.getElementById('q'),f=document.getElementById('f'),chips=document.getElementById('chips');
+function esc(s){return String(s).replace(/[&<>]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m]})}
+function render(){
+ if(!D)return;
+ var txt=q.value.trim().toLowerCase();c.innerHTML='';var nc=0,nd=0,np=0,ok=false;
+ D.subsistemas.forEach(function(s,i){
+  if(filtro&&String(i)!==filtro)return;
+  var html='<div class="section-block"><div class="section-header"><span class="badge-tag" style="background:'+s.color+'">'+s.letra+'</span><h2 class="section-title">'+esc(s.titulo)+'</h2></div>';
+  var tiene=false;
+  s.grupos.forEach(function(g){
+   var fil=g.ciclos.filter(function(x){return (x.nombre+' '+x.cursos.map(function(y){return y.nombre}).join(' ')).toLowerCase().indexOf(txt)>=0});
+   if(!fil.length)return;tiene=true;ok=true;
+   if(g.nombre)html+='<div class="group-label">'+esc(g.nombre)+'</div>';
+   html+='<div class="cards-grid">';
+   fil.forEach(function(x){nc++;html+='<div class="card-item"><div><h3 class="card-title">'+esc(x.nombre)+'</h3><div class="course-list">';
+    x.cursos.forEach(function(cu){if(cu.archivo){nd++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><a class="btn-download" href="'+encodeURI(cu.archivo.ruta)+'" target="_blank" rel="noopener">PDF</a></div>'}else{np++;html+='<div class="course-row"><span>'+esc(cu.nombre)+'</span><span class="tag-soon">Pronto</span></div>'}});
+    html+='</div></div></div>'});
+   html+='</div>'});
+  html+='</div>';
+  if(tiene)c.innerHTML+=html});
+ document.getElementById('s1').textContent=nc;document.getElementById('s2').textContent=nd;document.getElementById('s3').textContent=np;v.style.display=ok?'none':'block'}
+function init(d){D=d;
+ D.subsistemas.forEach(function(s,i){var o=document.createElement('option');o.value=i;o.textContent=s.letra.toUpperCase()+' — '+s.titulo;f.appendChild(o);
+  var b=document.createElement('button');b.className='chip-btn';b.textContent=s.titulo.slice(0,30);b.onclick=function(){filtro=filtro==String(i)?"":String(i);f.value=filtro;var all=document.querySelectorAll('.chip-btn');for(var k=0;k<all.length;k++)all[k].classList.remove('active');if(filtro)b.classList.add('active');render()};chips.appendChild(b)});
+ render()}
+try{D=JSON.parse(document.getElementById('datos').textContent);init(D)}catch(e){fetch('data.json').then(function(r){return r.json()}).then(init).catch(function(err){v.style.display='block';v.textContent='No se pudo cargar: '+err.message})}
+var t;q.oninput=function(){clearTimeout(t);t=setTimeout(render,120)};f.onchange=function(){filtro=f.value;render()};
+</script>
+</body>
+</html>
