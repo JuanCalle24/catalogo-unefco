@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de Textos Guía · UNEFCO</title>
+<meta name="description" content="Descarga los textos guía de los cursos de formación, organizados por subsistema y ciclo.">
+<meta property="og:title" content="Catálogo de Textos Guía · UNEFCO">
+<meta property="og:description" content="Textos guía de formación en PDF, organizados por subsistema y ciclo.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f2d59">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📘%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f4f6fa;--surface:#fff;--ink:#142033;--muted:#55627a;--line:#dbe1ea;--btn:#0f2d59;--btn-ink:#fff;--ok:#0b7a53;--okbg:#e2f4ec;--mark:#fde68a;--accent:#d97706;--bar:#e6ebf3}
+[data-theme=dark]{--bg:#0b111e;--surface:#131b2c;--ink:#e8edf6;--muted:#9eaac1;--line:#26324a;--btn:#8bb6ff;--btn-ink:#0b1a33;--ok:#4ade9f;--okbg:#10301f;--mark:#6b5300;--accent:#fbbf24;--bar:#223049}
+*{box-sizing:border-box}
+html{scroll-padding-top:72px}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;font:400 1rem/1.55 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.top{background:#0f2d59;color:#fff;padding-bottom:28px}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.site{font-weight:700;letter-spacing:.04em}
+.ghost{font:inherit;font-size:.9rem;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.4);border-radius:8px;padding:6px 12px;cursor:pointer}
+.ghost:hover{background:rgba(255,255,255,.12)}
+h1{font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.1;margin:18px 0 10px;font-weight:700;letter-spacing:-.02em}
+.lead{margin:0 0 22px;max-width:56ch;color:#d3def0;font-size:1.1rem}
+.search{position:relative;max-width:560px}
+.search input{width:100%;font:inherit;font-size:1.05rem;padding:14px 16px 14px 46px;border:2px solid transparent;border-radius:12px;background:#fff;color:#142033}
+.search input::placeholder{color:#6b778c}
+.search svg{position:absolute;left:15px;top:50%;translate:0 -50%;width:20px;height:20px;stroke:#55627a;fill:none;stroke-width:2;pointer-events:none}
+.stats{display:flex;flex-wrap:wrap;gap:6px 24px;margin:18px 0 0;color:#d3def0;font-size:.95rem}
+.stats b{color:#fff;font-size:1.15rem}
+
+.filters{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.fw{display:flex;align-items:center;gap:16px;padding-top:10px;padding-bottom:10px}
+.chips{display:flex;gap:8px;overflow-x:auto;flex:1;scrollbar-width:thin;padding:2px}
+.chip{flex:none;font:inherit;font-size:.92rem;font-weight:600;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;white-space:nowrap}
+.chip:hover{border-color:var(--muted)}
+.chip[aria-pressed=true]{background:var(--btn);color:var(--btn-ink);border-color:var(--btn)}
+.sw{flex:none;display:flex;align-items:center;gap:8px;font-size:.92rem;font-weight:600;cursor:pointer}
+.sw input{width:18px;height:18px;accent-color:var(--btn)}
+@media(max-width:640px){.fw{flex-direction:column;align-items:stretch;gap:8px}}
+
+main{padding-top:24px;padding-bottom:56px}
+details.sec{margin-bottom:18px}
+summary{display:flex;align-items:center;gap:12px;padding:12px 4px;cursor:pointer;list-style:none;font-size:1.3rem;font-weight:700}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";margin-left:auto;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);rotate:45deg;transition:rotate .15s}
+details[open]>summary::after{rotate:-135deg}
+.badge{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--c);color:#fff;font-size:1rem}
+.count{font-size:.9rem;font-weight:400;color:var(--muted)}
+.group{margin:14px 0 8px 4px;font-size:1rem;font-weight:600;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px;margin-bottom:8px}
+.card{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:10px;padding:18px 18px 12px}
+.card h3{margin:0 0 10px;font-size:1.08rem;line-height:1.3}
+.prog{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:.85rem;color:var(--muted)}
+.prog i{flex:1;height:6px;border-radius:3px;background:var(--bar);overflow:hidden}
+.prog i b{display:block;height:100%;background:var(--ok)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.row span.n{flex:1;line-height:1.35}
+.row.off span.n{color:var(--muted)}
+.dl{flex:none;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:8px;background:var(--btn);color:var(--btn-ink);font-size:.9rem;font-weight:600;text-decoration:none}
+.dl:hover{filter:brightness(1.12)}
+.dl svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2}
+.soon{flex:none;font-size:.82rem;color:var(--muted);border:1px dashed var(--line);border-radius:6px;padding:3px 9px}
+.k{color:var(--muted);font-weight:600}
+mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
+.msg{text-align:center;padding:56px 16px;color:var(--muted);font-size:1.05rem}
+.msg button{font:inherit;font-weight:600;margin-top:12px;padding:9px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <span class="site">UNEFCO</span>
+      <button id="tema" class="ghost" type="button">Modo oscuro</button>
+    </div>
+    <h1>Catálogo de Textos Guía</h1>
+    <p class="lead">Descarga los textos de cada curso de formación, organizados por subsistema y ciclo.</p>
+    <div class="search">
+      <label for="q" class="sr">Buscar por ciclo o curso</label>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Buscar por ciclo o curso" autocomplete="off">
+    </div>
+    <p class="stats" id="stats" aria-live="polite"></p>
+  </div>
+</header>
+
+<nav class="filters" aria-label="Filtros">
+  <div class="wrap fw">
+    <div id="chips" class="chips" role="group" aria-label="Filtrar por subsistema"></div>
+    <label class="sw"><input type="checkbox" id="d"> Solo disponibles</label>
+  </div>
+</nav>
+
+<main class="wrap" id="c"><p class="msg">Cargando catálogo…</p></main>
+
+<footer><div class="wrap">Catálogo de Textos Guía · UNEFCO · <span id="yr"></span></div></footer>
+
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+var norm=function(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()};
+var mk=function(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+var NS='http://www.w3.org/2000/svg';
+var st={raw:'',q:'',n:'',d:false},D,root=document.documentElement;
+
+/* Tema */
+function setTheme(t){root.dataset.theme=t;$('#tema').textContent=t==='dark'?'Modo claro':'Modo oscuro';try{localStorage.setItem('tema',t)}catch(e){}}
+var saved;try{saved=localStorage.getItem('tema')}catch(e){}
+setTheme(saved||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+$('#tema').onclick=function(){setTheme(root.dataset.theme==='dark'?'light':'dark')};
+$('#yr').textContent=new Date().getFullYear();
+
+/* Estado en la URL (#q=...&n=1&d=1) */
+function readHash(){var p=new URLSearchParams(location.hash.slice(1));st.raw=p.get('q')||'';st.q=norm(st.raw.trim());st.n=p.get('n')||'';st.d=p.get('d')==='1'}
+function writeHash(){var p=new URLSearchParams();if(st.raw.trim())p.set('q',st.raw.trim());if(st.n!=='')p.set('n',st.n);if(st.d)p.set('d','1');var h=p.toString();history.replaceState(null,'',h?'#'+h:location.pathname+location.search)}
+
+function hl(el,text){
+  if(!st.q){el.textContent=text;return}
+  var i=norm(text).indexOf(st.q);
+  if(i<0){el.textContent=text;return}
+  var m=mk('mark',null,text.slice(i,i+st.q.length));
+  el.append(text.slice(0,i),m,text.slice(i+st.q.length));
+}
+function icon(){
+  var s=document.createElementNS(NS,'svg');s.setAttribute('viewBox','0 0 24 24');s.setAttribute('aria-hidden','true');
+  var p=document.createElementNS(NS,'path');p.setAttribute('d','M12 4v11m0 0-4-4m4 4 4-4M5 20h14');
+  p.setAttribute('stroke-linecap','round');p.setAttribute('stroke-linejoin','round');s.appendChild(p);return s;
+}
+
+function stats(){
+  var ci=0,ok=0,no=0;
+  D.subsistemas.forEach(function(s){s.grupos.forEach(function(g){g.ciclos.forEach(function(x){ci++;x.cursos.forEach(function(c){c.archivo?ok++:no++})})})});
+  var e=$('#stats');e.textContent='';
+  [[ci,'ciclos'],[ok,'PDF disponibles'],[no,'por publicar']].forEach(function(a){
+    var sp=mk('span');sp.append(mk('b',null,a[0]),' '+a[1]);e.append(sp);
+  });
+}
+
+function render(){
+  var out=document.createDocumentFragment(),any=false,filtering=!!(st.q||st.n!==''||st.d),first=true;
+  document.querySelectorAll('.chip').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.n===st.n))});
+  D.subsistemas.forEach(function(s,i){
+    if(st.n!==''&&String(i)!==st.n)return;
+    var det=mk('details','sec'),nCic=0,body=document.createDocumentFragment();
+    det.style.setProperty('--c',s.color||'#0f2d59');
+    s.grupos.forEach(function(g){
+      var cards=[];
+      g.ciclos.forEach(function(x,xi){
+        var all=x.cursos,ciclo=st.q&&norm(x.nombre).indexOf(st.q)>=0;
+        var list=all.filter(function(c){
+          if(st.d&&!c.archivo)return false;
+          return !st.q||ciclo||norm(c.nombre).indexOf(st.q)>=0;
+        });
+        if(!list.length)return;
+        var disp=all.filter(function(c){return c.archivo}).length;
+        var card=mk('article','card'),h=mk('h3'),ht=mk('span');h.append(mk('span','k','Ciclo '+(xi+1)+': '));hl(ht,x.nombre);h.append(ht);card.append(h);
+        var pr=mk('div','prog'),bar=mk('i'),fill=mk('b');
+        fill.style.width=(all.length?disp/all.length*100:0)+'%';bar.append(fill);
+        pr.append(bar,mk('span',null,disp+' de '+all.length+' disponibles'));card.append(pr);
+        list.forEach(function(c){
+          var r=mk('div','row'+(c.archivo?'':' off')),n=mk('span','n'),nt=mk('span');n.append(mk('span','k','Curso '+(all.indexOf(c)+1)+': '));hl(nt,c.nombre);n.append(nt);r.append(n);
+          if(c.archivo){
+            var a=mk('a','dl');a.href=encodeURI(c.archivo.ruta);a.setAttribute('download','');
+            a.setAttribute('aria-label','Descargar '+c.nombre);a.append(icon(),'Descargar');r.append(a);
+          }else r.append(mk('span','soon','Próximamente'));
+          card.append(r);
+        });
+        cards.push(card);nCic++;
+      });
+      if(!cards.length)return;
+      if(g.nombre)body.append(mk('h4','group',g.nombre));
+      var grid=mk('div','grid');cards.forEach(function(c){grid.append(c)});body.append(grid);
+    });
+    if(!nCic)return;
+    any=true;
+    var sum=mk('summary'),b=mk('span','badge',s.letra);b.setAttribute('aria-hidden','true');
+    sum.append(b,mk('span',null,s.titulo),mk('span','count',nCic+(nCic===1?' ciclo':' ciclos')));
+    det.append(sum,body);
+    if(filtering||first)det.open=true;
+    first=false;out.append(det);
+  });
+  var c=$('#c');c.textContent='';
+  if(any)c.append(out);
+  else{
+    var m=mk('div','msg');m.append(mk('p',null,'No hay resultados'+(st.raw.trim()?' para “'+st.raw.trim()+'”':'')+'. Prueba con otra palabra o quita los filtros.'));
+    var bt=mk('button',null,'Quitar filtros');bt.type='button';bt.onclick=reset;m.append(bt);c.append(m);
+  }
+}
+
+function reset(){st.raw='';st.q='';st.n='';st.d=false;$('#q').value='';$('#d').checked=false;writeHash();render()}
+
+function init(data){
+  D=data;readHash();
+  var chips=$('#chips');
+  function chip(label,n){var b=mk('button','chip',label);b.type='button';b.dataset.n=n;b.onclick=function(){st.n=n;writeHash();render()};chips.append(b)}
+  chip('Todos','');D.subsistemas.forEach(function(s,i){chip(s.corto||s.titulo,String(i))});
+  $('#q').value=st.raw;$('#d').checked=st.d;
+  var t;$('#q').addEventListener('input',function(e){clearTimeout(t);t=setTimeout(function(){st.raw=e.target.value;st.q=norm(st.raw.trim());writeHash();render()},120)});
+  $('#d').onchange=function(e){st.d=e.target.checked;writeHash();render()};
+  document.addEventListener('keydown',function(e){if(e.key==='/'&&document.activeElement.tagName!=='INPUT'){e.preventDefault();$('#q').focus()}});
+  stats();render();
+}
+
+fetch('data.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(init).catch(function(){
+  $('#c').innerHTML='<p class="msg">No se pudo cargar el catálogo (data.json). Si abriste el archivo directamente desde tu computadora, usa un servidor local o la página publicada en GitHub Pages.</p>';
+});
+})();
+</script>
+</body>
+</html>

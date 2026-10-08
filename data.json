@@ -1,0 +1,485 @@
+{
+  "titulo": "CATÁLOGOS Y CURSOS",
+  "subsistemas": [
+    {
+      "letra": "a",
+      "color": "#0f2d59",
+      "titulo": "Ciclos/cursos de formación continua para todos los actores del Sistema Educativo Plurinacional",
+      "corto": "Formación continua",
+      "grupos": [
+        {
+          "nombre": "",
+          "ciclos": [
+            {
+              "nombre": "Ofimática Básica para la Gestión y Planificación Educativa",
+              "cursos": [
+                {
+                  "nombre": "Fundamentos de procesamiento de textos en el ámbito educativo",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-1-curso-1-fundamentos-de-procesamiento-de-textos-en-el.pdf"
+                  }
+                },
+                {
+                  "nombre": "Gestión automatizada y sistemática del cuaderno pedagógico",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-2-curso-2.pdf"
+                  }
+                },
+                {
+                  "nombre": "Presentaciones interactivas aplicadas al ámbito educativo",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-3-curso-3.pdf"
+                  }
+                },
+                {
+                  "nombre": "Uso básico de internet en la práctica docente",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-4-curso-4-ofimatica.pdf"
+                  }
+                }
+              ]
+            },
+            {
+              "nombre": "Gamificación e Innovación con Inteligencia Artificial",
+              "cursos": [
+                {
+                  "nombre": "Uso y aplicación de herramientas y recursos digitales para la gamificación",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-1-uso-y-aplicacion-de-herramientas-y-recursos-digitale.pdf"
+                  }
+                },
+                {
+                  "nombre": "Diseño de experiencias gamificadas en el aula",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-2-diseno-de-experiencias-gamificadas-en-el-aula.pdf"
+                  }
+                },
+                {
+                  "nombre": "Evaluación y seguimiento en el aula gamificada",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-3-c3-evaluacion-y-seguimiento-en-el-aula-gamificada.pdf"
+                  }
+                }
+              ]
+            },
+            {
+              "nombre": "Prevención, Detección, Actuación y Derivación de la Violencia en el Ámbito Educativo",
+              "cursos": [
+                {
+                  "nombre": "Protección integral de niñas, niños y adolescentes en situaciones de violencia",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-1-proteccion-integral-de-ninas-ninos-y-adolescentes.pdf"
+                  }
+                },
+                {
+                  "nombre": "Marco normativo e Instrumentos para la detección, actuación y derivación en casos de violencia",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-2-c2-corregido-prevencion.pdf"
+                  }
+                },
+                {
+                  "nombre": "Procedimientos para la referencia y contra referencia en el proceso de restitución de derechos",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-3-c3-prevencion-corregido.pdf"
+                  }
+                }
+              ]
+            },
+            {
+              "nombre": "Educación Integral en Sexualidad",
+              "cursos": [
+                {
+                  "nombre": "Sexualidad integral, derechos sexuales y derechos reproductivos"
+                },
+                {
+                  "nombre": "Prevención del embarazo en adolescentes y jóvenes"
+                },
+                {
+                  "nombre": "Prevención de ITS y VIH/SIDA"
+                }
+              ]
+            },
+            {
+              "nombre": "Adaptaciones Curriculares e Inclusión Educativa desde el Diseño Universal para el Aprendizaje",
+              "cursos": [
+                {
+                  "nombre": "Diseño universal para el aprendizaje (DUA)",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-1-diseno-universal-para-el-aprendizaje-dua.pdf"
+                  }
+                },
+                {
+                  "nombre": "Estrategias para la discapacidad sensorial",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-2-estrategias-para-la-discapacidad-sensorial.pdf"
+                  }
+                },
+                {
+                  "nombre": "Neurodiversidad y dificultades de aprendizaje",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-3-cuaderno-3-neurodiversidad-y-dificultades-de-aprendi.pdf"
+                  }
+                }
+              ]
+            },
+            {
+              "nombre": "Lengua de Señas Boliviana para Maestras, Maestros y otros actores del SEP",
+              "cursos": [
+                {
+                  "nombre": "Comunidad sorda y la lengua de señas boliviana LSB",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-1-lengua-de-senas-boliviana-para-maestras-maestros-y-o.pdf"
+                  }
+                },
+                {
+                  "nombre": "Desarrollo de habilidades comunicativas en LSB",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-2-c2-lsb.pdf"
+                  }
+                },
+                {
+                  "nombre": "Habilidades psicosociales, expresión corporal y facial como componentes de la Lengua de Señas Boliviana"
+                },
+                {
+                  "nombre": "Aplicación de procesos comunicativos en LSB"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "letra": "b",
+      "color": "#1a4480",
+      "titulo": "Ciclos/cursos formativos para el Subsistema de Educación Regular",
+      "corto": "Educación Regular",
+      "grupos": [
+        {
+          "nombre": "Formación especializada para maestras/os de Educación Inicial en Familia Comunitaria",
+          "ciclos": [
+            {
+              "nombre": "Estimulación Oportuna y Detección del Desarrollo en Educación Inicial",
+              "cursos": [
+                {
+                  "nombre": "Desarrollo integral en Educación Inicial",
+                  "archivo": {
+                    "ruta": "pdfs/inicial-curso-1-desarrollo-integral-en-educacion-inicial.pdf"
+                  }
+                },
+                {
+                  "nombre": "Instrumentos psicopedagógicos para la identificación del desarrollo integral en Educación Inicial",
+                  "archivo": {
+                    "ruta": "pdfs/inicial-curso-2-c-2-instrumentos-psicopedagogicos-para-la-identifica.pdf"
+                  }
+                },
+                {
+                  "nombre": "Estrategias pedagógicas para la estimulación integral"
+                }
+              ]
+            },
+            {
+              "nombre": "Desarrollo de Habilidades previas a la Lectura y Escritura en Educación Inicial",
+              "cursos": [
+                {
+                  "nombre": "Desarrollo de la conciencia fonológica",
+                  "archivo": {
+                    "ruta": "pdfs/inicial-curso-1-c1-desarrollo-de-la-conciencia-fonologica.pdf"
+                  }
+                },
+                {
+                  "nombre": "Desarrollo de procesos en la comprensión lectora"
+                },
+                {
+                  "nombre": "Grafomotricidad para la lectura y escritura"
+                }
+              ]
+            },
+            {
+              "nombre": "Dinamizando la Educación Inicial en Familia Comunitaria No Escolarizada",
+              "cursos": [
+                {
+                  "nombre": "Desarrollo integral y aprendizaje temprano",
+                  "archivo": {
+                    "ruta": "pdfs/inicial-curso-1-desarrollo-integral-y-aprendizaje-temprano.pdf"
+                  }
+                },
+                {
+                  "nombre": "Estrategias para la atención en la diversidad y la participación comunitaria en el desarrollo integral"
+                },
+                {
+                  "nombre": "Factores que inciden en el desarrollo de la niña y el niño menor a 4 años"
+                },
+                {
+                  "nombre": "Contexto social y cultural de la primera infancia"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Formación especializada para maestras/os de Educación Primaria Comunitaria Vocacional",
+          "ciclos": [
+            {
+              "nombre": "Estrategias Didácticas para el Desarrollo de la Comprensión Lectora y Escritura Creativa en Educación Primaria",
+              "cursos": [
+                {
+                  "nombre": "Herramientas de detección y estrategias para la mejora de la comprensión lectora",
+                  "archivo": {
+                    "ruta": "pdfs/primaria-curso-1-herramientas-de-deteccion-y-estrategias-para-la-mejo.pdf"
+                  }
+                },
+                {
+                  "nombre": "Didáctica de la lectura textual, inferencial o deductiva y crítica",
+                  "archivo": {
+                    "ruta": "pdfs/primaria-curso-2-c2-didactica-de-la-lectura-textual-inferencial-o-ded.pdf"
+                  }
+                },
+                {
+                  "nombre": "Escritura creativa para la producción de textos"
+                }
+              ]
+            },
+            {
+              "nombre": "Didáctica del Pensamiento Lógico Matemático y Evaluación para el Aprendizaje Significativo",
+              "cursos": [
+                {
+                  "nombre": "Herramientas de detección y estrategias pedagógicas para potenciar el pensamiento lógico matemático"
+                },
+                {
+                  "nombre": "Metodologías activas para la resolución de problemas"
+                },
+                {
+                  "nombre": "Evaluación inteligente para el aprendizaje significativo basado en problemas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Formación especializada para maestras/os de Educación Secundaria Comunitaria Productiva",
+          "ciclos": [
+            {
+              "nombre": "Desarrollo de Competencias en Lectura Comprensiva y Producción Textual en Educación Secundaria",
+              "cursos": [
+                {
+                  "nombre": "Estrategias para desarrollar la comprensión lectora en el aula"
+                },
+                {
+                  "nombre": "Técnicas para la redacción y argumentación escrita"
+                },
+                {
+                  "nombre": "Promoviendo la lectura crítica y escritura creativa"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "letra": "c",
+      "color": "#d97706",
+      "titulo": "Ciclos/cursos formativos para el Subsistema de Educación Alternativa y Especial",
+      "corto": "Alternativa y Especial",
+      "grupos": [
+        {
+          "nombre": "Formación especializada para maestras/os de Educación Alternativa",
+          "ciclos": [
+            {
+              "nombre": "Aprendizaje Basado en Proyectos con Enfoque en Educación Productiva",
+              "cursos": [
+                {
+                  "nombre": "Metodologías de aprendizaje basado en proyectos"
+                },
+                {
+                  "nombre": "Estrategias de aplicación de la metodología del aprendizaje basado en proyectos"
+                },
+                {
+                  "nombre": "Estrategias de evaluación para el aprendizaje basado en proyectos"
+                }
+              ]
+            },
+            {
+              "nombre": "Gestión de Emprendimientos y Empleabilidad en Educación Técnica Tecnológica y Productiva",
+              "cursos": [
+                {
+                  "nombre": "Ideas y plan de negocios para emprendimientos productivos"
+                },
+                {
+                  "nombre": "Marketing digital para emprendimientos productivos"
+                },
+                {
+                  "nombre": "Plan de acción y evaluación de proyectos de emprendimientos productivos"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Formación especializada para maestras/os de Educación Especial",
+          "ciclos": [
+            {
+              "nombre": "Estrategias Innovadoras para la Atención a Estudiantes con Dificultad de Aprendizaje en Educación Especial",
+              "cursos": [
+                {
+                  "nombre": "Diseño de estrategias didácticas inclusivas y comunitarias para estudiantes con dificultades de aprendizaje",
+                  "archivo": {
+                    "ruta": "pdfs/especial-curso-1-curso-1-de-educacion-especial.pdf"
+                  }
+                },
+                {
+                  "nombre": "Tecnologías educativas para apoyar el aprendizaje de estudiantes con dificultades de aprendizaje",
+                  "archivo": {
+                    "ruta": "pdfs/especial-curso-2-cuaderno-2-educacion-especial.pdf"
+                  }
+                },
+                {
+                  "nombre": "Desarrollo socioemocional de estudiantes con dificultades de aprendizaje"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "letra": "d",
+      "color": "#1e293b",
+      "titulo": "Ciclos/cursos formativos para el Subsistema de Educación Superior de Formación Profesional",
+      "corto": "Educación Superior",
+      "grupos": [
+        {
+          "nombre": "Formación especializada para docentes de Institutos Técnicos Tecnológicos y Artísticos",
+          "ciclos": [
+            {
+              "nombre": "Asesoría y Tutoría en Modalidades de Graduación en Formación Técnica - Tecnológica",
+              "cursos": [
+                {
+                  "nombre": "Planificación y organización para el acompañamiento en las diferentes modalidades de graduación",
+                  "archivo": {
+                    "ruta": "pdfs/superior-curso-1-cuaderno-1-asesoria-y-turoria.pdf"
+                  }
+                },
+                {
+                  "nombre": "Estrategias de seguimiento para la tutoría en las diferentes modalidades de graduación",
+                  "archivo": {
+                    "ruta": "pdfs/superior-curso-2-c2-seguimiento-para-la-tutoria-en-las-diferentes-mod.pdf"
+                  }
+                },
+                {
+                  "nombre": "Evaluación de las modalidades de graduación en formación técnica - tecnológica"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "letra": "e",
+      "color": "#0f2d59",
+      "titulo": "Taller Complementario de Formación Integral - TACFI",
+      "corto": "TACFI",
+      "grupos": [
+        {
+          "nombre": "Formación especializada para estudiantes de ESFM – UA",
+          "ciclos": [
+            {
+              "nombre": "Herramientas Tecnológicas Digitales Aplicadas en la Enseñanza de la Lengua Extranjera Inglés",
+              "cursos": [
+                {
+                  "nombre": "Fundamentos comunicativos en inglés para la formación docente",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-1-fundamentos-comunicativos-en-ingles-para-la-formacio.pdf"
+                  }
+                },
+                {
+                  "nombre": "Inglés para la comunicación cotidiana y profesional",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-2-curso-2-ingles-para-la-comunicacion-cotidiana-y-prof.pdf"
+                  }
+                },
+                {
+                  "nombre": "Inglés para la comunicación narrativa y reflexiva",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-3-curso-3-tacfi-ingles.pdf"
+                  }
+                }
+              ]
+            },
+            {
+              "nombre": "Fortalecimiento de Habilidades Comunicativas y Liderazgo a través del Arte Escénico",
+              "cursos": [
+                {
+                  "nombre": "Fundamentos de comunicación y expresión escénica para la formación docente",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-1-fundamentos-de-comunicacion-y-expresion-escenica-par.pdf"
+                  }
+                },
+                {
+                  "nombre": "Comunicación creativa y liderazgo pedagógico a través del arte escénico",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-2-c2-comunicacion-creativa-y-liderazgo-pedagogico-a-tr.pdf"
+                  }
+                },
+                {
+                  "nombre": "Gestión y dominio del aula mediante estrategias de expresión escénica",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-3-c3-gestion-y-dominio-del-aula-mediante-estrategias-d.pdf"
+                  }
+                }
+              ]
+            },
+            {
+              "nombre": "Creación de textos didácticos con Inteligencia Artificial",
+              "cursos": [
+                {
+                  "nombre": "Diseño y estructuración de materiales educativos",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-1-diseno-y-estructuracion-de-materiales-didacticos.pdf"
+                  }
+                },
+                {
+                  "nombre": "Producción y edición de textos didácticos para el aula",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-2-curso-2-produccion-y-edicion-de-textos-didacticos-pa.pdf"
+                  }
+                },
+                {
+                  "nombre": "Elaboración de recursos digitales y multiformato para entornos educativos",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-3-c3-elaboracion-de-recursos-digitales-multiformato.pdf"
+                  }
+                }
+              ]
+            },
+            {
+              "nombre": "Producción Académica Asistida con Inteligencia Artificial",
+              "cursos": [
+                {
+                  "nombre": "Fundamentos y uso ético de la IA en la producción académica",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-1-c1-fundamentos-y-uso-etiuco-de-la-ia-en-la-producion.pdf"
+                  }
+                },
+                {
+                  "nombre": "Herramientas de inteligencia artificial para la investigación y redacción académica",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-2-curso-2-herramientas-de-inteligencia-artificial-para.pdf"
+                  }
+                },
+                {
+                  "nombre": "Diseño y producción de materiales académicos con IA",
+                  "archivo": {
+                    "ruta": "pdfs/tacfi-curso-3-c3-diseno-y-produccion-de-materiales-academicos-ia.pdf"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
