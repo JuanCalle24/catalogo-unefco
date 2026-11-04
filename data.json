@@ -188,10 +188,16 @@
                   }
                 },
                 {
-                  "nombre": "Desarrollo de procesos en la comprensión lectora"
+                  "nombre": "Desarrollo de procesos en la comprensión lectora",
+                  "archivo": {
+                    "ruta": "pdfs/inicial-curso-2-desarrollo-de-procesos-en-la-comprension-lectora.pdf"
+                  }
                 },
                 {
-                  "nombre": "Grafomotricidad para la lectura y escritura"
+                  "nombre": "Grafomotricidad para la lectura y escritura",
+                  "archivo": {
+                    "ruta": "pdfs/inicial-curso-3-grafomotricidad-para-la-lectura-y-escritura.pdf"
+                  }
                 }
               ]
             },
@@ -236,7 +242,10 @@
                   }
                 },
                 {
-                  "nombre": "Escritura creativa para la producción de textos"
+                  "nombre": "Escritura creativa para la producción de textos",
+                  "archivo": {
+                    "ruta": "pdfs/primaria-curso-3-escritura-creativa-para-la-produccion-de-textos.pdf"
+                  }
                 }
               ]
             },
@@ -335,7 +344,10 @@
                   }
                 },
                 {
-                  "nombre": "Desarrollo socioemocional de estudiantes con dificultades de aprendizaje"
+                  "nombre": "Desarrollo socioemocional de estudiantes con dificultades de aprendizaje",
+                  "archivo": {
+                    "ruta": "pdfs/especial-curso-3-desarrollo-socioemocional-de-estudiantes-con-dificultades.pdf"
+                  }
                 }
               ]
             }
@@ -368,7 +380,10 @@
                   }
                 },
                 {
-                  "nombre": "Evaluación de las modalidades de graduación en formación técnica - tecnológica"
+                  "nombre": "Evaluación de las modalidades de graduación en formación técnica - tecnológica",
+                  "archivo": {
+                    "ruta": "pdfs/superior-curso-3-evaluacion-de-las-modalidades-de-graduacion.pdf"
+                  }
                 }
               ]
             }
