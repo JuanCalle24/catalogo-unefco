@@ -173,7 +173,7 @@ function render(){
           if(c.archivo){
             var a=mk('a','dl');a.href=encodeURI(c.archivo.ruta);a.setAttribute('download','');
             a.setAttribute('aria-label','Descargar '+c.nombre);a.append(icon(),'Descargar');r.append(a);
-          }else r.append(mk('span','soon','Próximamente'));
+          }else r.append(mk('span','soon','NO DISPONIBLE'));
           card.append(r);
         });
         cards.push(card);nCic++;
