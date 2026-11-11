@@ -89,13 +89,22 @@
               "nombre": "Educación Integral en Sexualidad",
               "cursos": [
                 {
-                  "nombre": "Sexualidad integral, derechos sexuales y derechos reproductivos"
+                  "nombre": "Sexualidad integral, derechos sexuales y derechos reproductivos",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-1-01_18_eis_c1-sexualidad-integral-derechos-sexuales.pdf"
+                  }
                 },
                 {
-                  "nombre": "Prevención del embarazo en adolescentes y jóvenes"
+                  "nombre": "Prevención del embarazo en adolescentes y jóvenes",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-2-01_18_eis_c2-prevencion-embarazo-adolescentes.pdf"
+                  }
                 },
                 {
-                  "nombre": "Prevención de ITS y VIH/SIDA"
+                  "nombre": "Prevención de ITS y VIH/SIDA",
+                  "archivo": {
+                    "ruta": "pdfs/todos-los-actores-curso-3-01_18_eis_c3-prevencion-its-vih.pdf"
+                  }
                 }
               ]
             },
